@@ -41,7 +41,7 @@ double mole_C,mole_H,mole_O;
 
 double small;
 	
-	if (mole_C <= mole_H &&mole_C<=mole_O )
+	if (mole_C <= mole_H && mole_C<=mole_O )
 	{ small= mole_C;
 	}
 	
@@ -54,7 +54,7 @@ double small;
 	}
 	
 //mole ratios of each element.
-double ratio_H,ratio_O,ratio_C;
+int ratio_H,ratio_O,ratio_C;
 
 ratio_H=(mole_H)/small;
 ratio_O=(mole_O)/small;
@@ -77,7 +77,7 @@ if (answer == 1)
 //prompt for molecular formula.
 double molar_mass;
 
-cout<<"Enter molar mass to calculate molecular formula:"<<endl;
+cout<<"Enter molar mass to calculate molecular formula\(in g\\mol):"<<endl;
 cin>>molar_mass;
 cout<<"____________________________________________________________________________________________________________________________________"<<endl;
 // 'n' for molecular formula.
@@ -86,17 +86,13 @@ double n;
 n=(molar_mass)/(emperical_mass);
 
 //molecular formula.
-double molecular_mass1,molecular_mass2,molecular_mass3;
-molecular_mass1= n*ratio_H;
+int molecular_mass1,molecular_mass2,molecular_mass3;
 molecular_mass2= n*ratio_O;
 molecular_mass3= n*ratio_C;
 cout<<"    H:O:C\t::\t";
+
+molecular_mass1= n*ratio_H;
 cout<<molecular_mass1<<" : "<<molecular_mass2<<" : "<<molecular_mass3;}
-
-
-
-
-
 
 return 0;
 }
